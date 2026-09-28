@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - ReUsaCol</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo-reusacol-icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="img/logo-reusacol.svg" alt="ReUsaCol - Recuperación Usados Colombia" class="logo-img"></a>
+            <button class="menu-toggle">☰</button>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <h1 data-aos="fade-up">Nuestros Servicios</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Ofrecemos recolección a domicilio gratuita de ropa, libros, zapatos, juguetes y más. Trabajamos con iglesias y fundaciones para distribuir a quienes más lo necesitan.</p>
+        </section>
+
+        <section class="page-section">
+            <h2 data-aos="fade-up">Servicios Detallados</h2>
+            <div class="services-list" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item">
+                    <h3>Recolección de Ropa</h3>
+                    <p>Ropa usada en buen estado: camisas, pantalones, abrigos, etc.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Recolección de Libros</h3>
+                    <p>Libros escolares, novelas, textos universitarios.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Recolección de Zapatos</h3>
+                    <p>Zapatos y calzado en general, nuevos o usados.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Recolección de Juguetes</h3>
+                    <p>Juguetes para niños de todas las edades.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Otros Objetos</h3>
+                    <p>Artículos del hogar, electrónicos, muebles, etc.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2 data-aos="fade-up">Programa tu Recogida</h2>
+            <form action="submit.php" method="post" data-aos="fade-up" data-aos-delay="200">
+                <div class="mb-3">
+                    <label for="service-type" class="form-label">Tipo de Servicio</label>
+                    <select class="form-select" id="service-type" name="service-type" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="libros">Libros</option>
+                        <option value="zapatos">Zapatos</option>
+                        <option value="juguetes">Juguetes</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Cantidad Aproximada</label>
+                    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Ej: 5 bolsas" required>
+                </div>
+                <button type="submit" class="btn">Solicitar Recogida</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ReUsaCol. Todos los derechos reservados. | <a href="#" class="whatsapp-link">Contáctanos por WhatsApp</a></p>
+    </footer>
+
+    <a href="#" class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

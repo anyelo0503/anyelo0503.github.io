@@ -1,0 +1,628 @@
+:root {
+    --green-950: #0B2B1E;
+    --green-900: #12352A;
+    --green-800: #1B4332;
+    --green-700: #2D6A4F;
+    --green-600: #40916C;
+    --green-500: #52B788;
+    --green-400: #74C69D;
+    --green-300: #95D5B2;
+    --green-200: #B7E4C7;
+    --green-100: #D8F3DC;
+    --white: #FFFFFF;
+    --off-white: #F7FBF8;
+    --text: #16281F;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--white);
+    color: var(--text);
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--green-800);
+}
+
+a {
+    transition: color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+header {
+    background: var(--white);
+    color: var(--text);
+    padding: 1rem;
+    border-bottom: 2px solid var(--green-400);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(27, 67, 50, 0.06);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1rem;
+}
+
+.logo-img {
+    height: 46px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s var(--ease);
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.04);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid var(--green-500);
+    color: var(--green-700);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    position: absolute;
+    right: 1rem;
+    transition: all 0.3s var(--ease);
+}
+
+.menu-toggle:hover {
+    background: var(--green-100);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+ul li a {
+    color: var(--green-800);
+    text-decoration: none;
+    border: 2px solid var(--green-300);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s var(--ease);
+}
+
+ul li a:hover {
+    color: var(--white);
+    background: var(--green-600);
+    border-color: var(--green-600);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(64, 145, 108, 0.35);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--green-100) 0%, var(--white) 55%, var(--green-200) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 1.2s var(--ease);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.btn {
+    background: linear-gradient(135deg, var(--green-600), var(--green-500));
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.35s var(--ease);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(64, 145, 108, 0.35);
+    filter: brightness(1.05);
+}
+
+.what-we-collect, .coverage, .testimonials, .impact, .how-it-works {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--off-white);
+    margin: 1rem 0;
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 250px;
+    margin: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border: 1px solid var(--green-200);
+    border-radius: 14px;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(27, 67, 50, 0.12);
+    border-color: var(--green-400);
+}
+
+.testimonial {
+    background: var(--white);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--green-200);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.testimonial:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(27, 67, 50, 0.1);
+}
+
+footer {
+    background: var(--green-900);
+    color: var(--green-100);
+    text-align: center;
+    padding: 1.25rem;
+    border-top: 2px solid var(--green-500);
+}
+
+footer a {
+    color: var(--green-300);
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+/* Animaciones adicionales */
+.fade-in {
+    animation: fadeIn 1.2s var(--ease);
+}
+
+.slide-up {
+    animation: slideUp 0.9s var(--ease);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid var(--green-500);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    color: var(--green-700);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--green-500); }
+}
+
+.allies, .calculator, .blog {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--white);
+    margin: 1rem 0;
+}
+
+.calculator input, .calculator button {
+    margin: 0.5rem;
+}
+
+#impact-result {
+    font-weight: bold;
+    color: var(--green-700);
+}
+
+.page-section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--off-white);
+    margin: 1rem 0;
+}
+
+/* Pillars & values */
+.pillars, .values {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.pillar, .value {
+    width: 260px;
+    background: var(--white);
+    border: 1px solid var(--green-200);
+    border-radius: 14px;
+    padding: 1.5rem 1rem;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.pillar:hover, .value:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(27, 67, 50, 0.12);
+    border-color: var(--green-400);
+}
+
+.pillar .icon, .value .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.pillar.ambiental { border-top: 4px solid var(--green-500); }
+.pillar.economico { border-top: 4px solid var(--green-700); }
+.pillar.social { border-top: 4px solid var(--green-300); }
+
+/* Form styles */
+.form-control {
+    background: var(--white);
+    color: var(--text);
+    border: 1px solid var(--green-300);
+    border-radius: 5px;
+    transition: all 0.3s var(--ease);
+}
+
+.form-control:focus {
+    background: var(--green-100);
+    color: var(--text);
+    border-color: var(--green-600);
+    box-shadow: 0 0 0 0.2rem rgba(64, 145, 108, 0.2);
+}
+
+.form-label {
+    color: var(--green-700);
+}
+
+/* Blog article styles */
+article {
+    background: var(--white);
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 14px;
+    border: 1px solid var(--green-200);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(27, 67, 50, 0.12);
+}
+
+article h2 {
+    color: var(--green-700);
+    margin-bottom: 1rem;
+}
+
+article p {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+/* About page styles */
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 1rem;
+    transition: transform 0.3s var(--ease);
+}
+
+.team-member:hover {
+    transform: translateY(-6px);
+}
+
+.team-member h3 {
+    color: var(--green-700);
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    margin: 1rem;
+}
+
+.stat h3 {
+    color: var(--green-600);
+    font-size: 2rem;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial {
+    max-width: 600px;
+}
+
+.testimonial cite {
+    color: var(--green-600);
+    font-style: italic;
+}
+
+/* Services page styles */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border: 1px solid var(--green-200);
+    border-radius: 14px;
+    text-align: center;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(27, 67, 50, 0.12);
+}
+
+.service-item h3 {
+    color: var(--green-700);
+}
+
+/* Contact page styles */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--green-600), var(--green-500));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.35);
+    z-index: 1000;
+    text-decoration: none;
+    animation: pulse 2.4s infinite;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 26px rgba(27, 67, 50, 0.45);
+    color: var(--white);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 8px 20px rgba(27, 67, 50, 0.35), 0 0 0 0 rgba(82, 183, 136, 0.5); }
+    70% { box-shadow: 0 8px 20px rgba(27, 67, 50, 0.35), 0 0 0 16px rgba(82, 183, 136, 0); }
+    100% { box-shadow: 0 8px 20px rgba(27, 67, 50, 0.35), 0 0 0 0 rgba(82, 183, 136, 0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .logo-img {
+        height: 38px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        border-top: 2px solid var(--green-400);
+        padding: 1rem 0;
+    }
+
+    ul.show {
+        display: flex;
+    }
+
+    ul li a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .team {
+        flex-direction: column;
+    }
+
+    .impact-stats {
+        flex-direction: column;
+    }
+
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .testimonials {
+        align-items: stretch;
+    }
+
+    .testimonial {
+        max-width: 100%;
+    }
+
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .pillars, .values {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pillar, .value {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+        bottom: 1.25rem;
+        right: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    ul li a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .page-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .stat h3 {
+        font-size: 1.5rem;
+    }
+}

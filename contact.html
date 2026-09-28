@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ReUsaCol</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo-reusacol-icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="img/logo-reusacol.svg" alt="ReUsaCol - Recuperación Usados Colombia" class="logo-img"></a>
+            <button class="menu-toggle">☰</button>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <h1 data-aos="fade-up">Contáctanos</h1>
+            <p data-aos="fade-up" data-aos-delay="200">¿Tienes preguntas? Escríbenos a info@reusacol.com o llámanos al +57 123 456 7890. También puedes usar el formulario a continuación.</p>
+        </section>
+
+        <section class="page-section">
+            <h2 data-aos="fade-up">Envíanos un Mensaje</h2>
+            <form action="submit.php" method="post" data-aos="fade-up" data-aos-delay="200">
+                <div class="mb-3">
+                    <label for="contact-name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="contact-name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contact-email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="contact-email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contact-message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="contact-message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <section class="page-section">
+            <h2 data-aos="fade-up">Información de Contacto</h2>
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+                <p><strong>Email:</strong> info@reusacol.com</p>
+                <p><strong>Teléfono:</strong> +57 123 456 7890</p>
+                <p><strong>WhatsApp:</strong> <a href="#" class="whatsapp-link">Contáctanos por WhatsApp</a></p>
+                <p><strong>Dirección:</strong> Bogotá, Colombia</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ReUsaCol. Todos los derechos reservados. | <a href="#" class="whatsapp-link">Contáctanos por WhatsApp</a></p>
+    </footer>
+
+    <a href="#" class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
